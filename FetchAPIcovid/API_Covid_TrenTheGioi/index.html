@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="padding:0 50px;">
+    <h1 style="text-align: center;margin-top: 50px;">BẢNG THỐNG KÊ COVID TRÊN THẾ GIỚI</h1>
+
+    <select id="quocgiacb" onchange="getDataFromCombobox()">
+        <option id="country"></option>
+    </select>
+    <!-- Table của id được chọn -->
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Quốc gia</th>
+              <th scope="col">Dân số</th>
+              <th scope="col">Số ca nhiễm</th>
+              <th scope="col">Số ca tử vong</th>
+              <th scope="col">Số ca phục hồi</th>
+              <th scope="col">Cập nhật gần nhất</th>
+            </tr>
+          </thead>
+        <tbody id="data">
+          <tr>
+            <td id="id"></td>
+            <td id="quocgia"></td>
+            <td id="danso"></td>
+            <td id="soca-nhiem"></td>
+            <td id="soca-tuvong"></td>
+            <td id="soca-phuchoi"></td>
+            <td id="capnhat-gannhat"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- Table của toàn thế giới -->
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Quốc gia</th>
+            <th scope="col">Dân số</th>
+            <th scope="col">Số ca nhiễm</th>
+            <th scope="col">Số ca tử vong</th>
+            <th scope="col">Số ca phục hồi</th>
+            <th scope="col">Cập nhật gần nhất</th>
+          </tr>
+        </thead>
+        <tbody id="list">
+          <tr>
+            <td id="id"></td>
+            <td id="quocgia"></td>
+            <td id="danso"></td>
+            <td id="soca-nhiem"></td>
+            <td id="soca-tuvong"></td>
+            <td id="soca-phuchoi"></td>
+            <td id="capnhat-gannhat"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <script src="./callApi.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <script>
+    function getDataFromCombobox(){
+    var selectValue = document.getElementById('quocgiacb').value;
+    console.log(selectValue);
+}
+</script> -->
+</body>
+</html>
